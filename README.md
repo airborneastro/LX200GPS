@@ -1,5 +1,5 @@
 # LX200GPS Telescope Simulator
-This is a suite of python3 programs to simulate the behaviour of an LX200GPS telescope using its serial command protocol.  They were written with extensive input from openAI(chatgpt).
+This is a suite of python3 programs to simulate the behaviour of an LX200GPS telescope using its serial command protocol.  They were written with extensive input from openAI (ChatGPT).
 It can be used with the indi_lx200gps driver in Ekos or P.I.N.S.instead of the real telescope.  
 It is intended to watch the commands that are sent to the real telescope by astronomy software  
 such as KStars/Ekos or P.I.N.S./Touch-n-Stars, with which the simulator was tested. It might also work  
