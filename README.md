@@ -7,7 +7,7 @@ with other programs that send commands to an LX200GPS telescope via a serial int
 
 The simulator can either run on the same machine where the astronomy software is running  
 (indi or P.I.N.S. with indi) or on a different machine. A TCP to Serial bridge (tcp_server.py)  
-either connects to the simulator via 127.0.0.1 (locahost) when running the simulator on the same machine or to the IP address of the separate (server) machine running the simulator.
+either connects to the simulator via 127.0.0.1 (localhost) when running the simulator on the same machine or to the IP address of the separate (server) machine running the simulator.
 
 ## Usage running simulator on the same machine as indi/P.I.N.S.
 (Optional: create a python virtual environment and activate it).
@@ -39,7 +39,7 @@ the serial port to connect to would be
 ```
 /tmp/mytelescope
 ```
-After connecting the telescope device in PINS or Ekos, the simulator will echo all commmands sent to the telescope simulator and print the simulator telescope responses. After the startup commands are processed, try to slew the telescope to a target with KStars/Ekos or Stellarium within Touch-n-Stars
+After connecting the telescope device in PINS or Ekos, the simulator will echo all commmands sent to the telescope simulator and print the simulator telescope responses to the terminal. After the startup commands are processed, try to slew the telescope to a target with KStars/Ekos or Stellarium within Touch-n-Stars
 
 After disconnecting the mount device in Ekos or PINS, there is a timeout of 60 seconds before the simulator is restarted automatically. You cannot reconnect before that timeout is finished.
 
@@ -62,7 +62,7 @@ On the indi/PINS machine, start the TCP-to-serial connection with:
 ```
 with XXX.XXX.XXX.XXX the IP address of the machine running the simulator. Naturally, the simulator machine must be reachable within the network that the PINS/indi machine is in.
 
-After that, proceed as above. The same 60 second timeout applies. Do not forget to terminate the simulator and the TCP-connection with Ctrl-C on both machines.
+After that, proceed as above. The same 60 second timeout applies. Do not forget to terminate both the simulator and the TCP-connection with Ctrl-C on both machines.
 
 ## Park/Unpark behaviour
 The LX200GPS indi driver only knows a "Park" command and no "Unpark" command. After parking, the telescope is expected to be powered off (that is what its handbox says), and there is obviously no further response from the telescope. To simulate that, you should disconnect the Ekos/PINS mount and wait for the simulator timeout restart before reconnecting. After reconnecting, issue "Unpark" in Ekos or PINS/Touch-n-Stars.
