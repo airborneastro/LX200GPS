@@ -21,7 +21,7 @@ cd LX200GPS
 ```
 and then start the simulator with
 ```
-./start_sim.py
+./sim_start.py
 ```
 The simulator will expose a serial client port as a virtual serial device. Default:
 ```
@@ -33,7 +33,7 @@ In Ekos, use the "Devices Port Selector".
 
 With 
 ```
-./start_sim.py --clientport mytelescope
+./sim_start.py --clientport mytelescope
 ```
 the serial port to connect to would be
 ```
@@ -58,7 +58,7 @@ On the simulator machine, start the simulator in a terminal with:
 ```
 On the indi/PINS machine, start the TCP-to-serial connection with:
 ```
-./start_sim.py --server XXX.XXX.XXX.XXX
+./sim_start.py --server XXX.XXX.XXX.XXX
 ```
 with XXX.XXX.XXX.XXX the IP address of the machine running the simulator. Naturally, the simulator machine must be reachable within the network that the PINS/indi machine is in.
 
