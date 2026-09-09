@@ -153,7 +153,7 @@ class LX200Protocol:
 
             if command == b":Mw#":
                 self.state.start_west()
-                return b"":S
+                return b""
 
             if command == b":Qn#":
                 self.state.stop_north()
@@ -220,7 +220,7 @@ class LX200Protocol:
                 return b"LX200GPS Simulator#"
 
             if command == b":GG#":
-                utc_offset = time.localtime().tm_gmtoff/7200
+                utc_offset = time.localtime().tm_gmtoff/3600
                 return ('{:+05.1f}#'.format(utc_offset) ).encode("ascii")
 #                return b"+02.0#"
 

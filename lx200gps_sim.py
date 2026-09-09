@@ -62,8 +62,8 @@ def main():
     print(" LX200GPS Simulator")
     print("========================================")
 
-    print(f"Host      : {args.host}")
-    print(f"TCP Port  : {args.tcp_port}")
+    print(f"Host       : {args.host}")
+    print(f"TCP Port   : {args.tcp_port}")
 
     print("========================================")
 

@@ -29,13 +29,13 @@ sim = None
 if args.server == "127.0.0.1":
 # simulator is on same machine, start it here
     sim = subprocess.Popen([
-        "python", "/home/pi/LX200GPS/lx200gps_sim.py"
+        "python", "lx200gps_sim.py"
     ])
 
     time.sleep(1.0)
-#simulator is on same machine, just open TCP2Serial
+#simulator is on same or other machine, open TCP2Serial (only, for sim on other machine)
 client = subprocess.Popen([
-    "python", "/usr/local/bin/lx200gps_tcp.py",
+    "python", "lx200gps_tcp.py",
     "--serial_port",
     args.clientport,
     "--server",
