@@ -47,7 +47,7 @@ After disconnect, you can terminate the simulator with Ctrl-C in the terminal.
 
 ## Usage running the simulator on a separate machine
 Clone the repository on both the indi/PINS machine as well as the separate simulator machine.  
-(on the indi/PINS machine you would only need sim_start.py and tcp_server.py)
+(on the indi/PINS machine you would only need sim_start.py, tcp_server.py and lx200gps_tcp.py)
 On both machines:
 ```
 cd ~/LX200GPS
